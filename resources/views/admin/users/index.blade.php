@@ -20,7 +20,7 @@
                 @foreach($users as $user)
                     <tr>
                         <td>
-                        <img src="{{ asset($user->profile->avatar) }}" alt="" with="60" height="60">
+                        <img src="" alt="" with="60" height="60">
                         </td>
                         <td>
                         {{ $user->name }}

@@ -45,9 +45,9 @@ Auth::routes();
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 
-    Route::get('/', [
+    Route::get('/dashboard', [
         'uses' => 'HomeController@index', 
-        'as' => 'admin'
+        'as' => 'admin' //change at some point in admin panel to dashboard
     ]); 
 
     Route::get('posts', [
