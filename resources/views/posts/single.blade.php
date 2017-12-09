@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="post__content-info">
-                                {!! $post->content !!}
+                                {!! $post->content_html !!}
                         
 
                             <div class="widget w-tags">
@@ -116,14 +116,6 @@
 
                             <a href="#" class="social__item">
                                 <img src="app/svg/twitter.svg" alt="twitter">
-                            </a>
-
-                            <a href="#" class="social__item">
-                                <img src="app/svg/google.svg" alt="google">
-                            </a>
-
-                            <a href="#" class="social__item">
-                                <img src="app/svg/youtube.svg" alt="youtube">
                             </a>
 
                         </div>

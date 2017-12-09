@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Carbon\Carbon;
+use GrahamCampbell\Markdown\Facades\Markdown;
 
 class Post extends Model
 {
@@ -18,6 +20,11 @@ class Post extends Model
         'featured', 
         'user_id'
     ];
+
+    public function getContentHtmlAttribute($value)
+    {
+        return $this->content ? Markdown::convertToHtml(e($this->content)) : NULL;
+    }
 
     public function getFeaturedAttribute($featured)
     {

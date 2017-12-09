@@ -49,7 +49,7 @@
            
             <div class="form-group">
             <label for="content">Content</label>
-            <textarea id="summernote" name="content" id="content" cols="50" rows="50" class="form-control"></textarea>
+            <textarea id="body" name="content" id="content" cols="50" rows="50" class="form-control"></textarea>
             </div>
 
             <div class="form-group">
@@ -72,14 +72,7 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
 
 <script>
-$(document).ready(function() {
-  $('#summernote').summernote({
-  height: 300,                 // set editor height
-  minHeight: null,             // set minimum height of editor
-  maxHeight: null,             // set maximum height of editor
-  focus: true                  // set focus to editable area after initializing summernote
-});
-});
+var simplemde2 = new SimpleMDE({ element: $("#body")[0] });
 
 </script>
 @stop

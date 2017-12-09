@@ -65,3 +65,11 @@
     </div>
 
 @endsection
+
+@section('scripts')
+
+<script>
+var simplemde2 = new SimpleMDE({ element: $("#body")[0] });
+
+</script>
+@stop

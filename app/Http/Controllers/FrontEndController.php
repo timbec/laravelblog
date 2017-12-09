@@ -18,9 +18,7 @@ class FrontEndController extends Controller
 
     $settings = Setting::first(); 
 
-    $first_post = Post::orderBy('created_at', 'desc')->first(); 
-
-    $rest_posts = Post::orderBy('created_at', 'desc')->skip(1)->take(2)->get();
+    $posts = Post::all(); 
 
     $tutorials = Category::find(1);
     $thoughts = Category::find(2);
@@ -28,7 +26,7 @@ class FrontEndController extends Controller
     $articles = Category::find(4);
 
 
-    return view('index', compact('settings', 'categories', 'first_post','rest_posts', 'tutorials','thoughts','photos', 'articles'));
+    return view('index', compact('settings', 'categories', 'posts', 'tutorials','thoughts','photos', 'articles'));
     }
 
     public function singlePost($slug)
